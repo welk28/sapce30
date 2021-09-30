@@ -1,0 +1,736 @@
+/* PLANTILLA DGEST VERSION 1 */
+/* LUIS A LOPEZ GONZALEZ  */
+/* LLOPEZG EN SEP PUNTO GOB PUNTO MX  */
+
+/* CUERPO  ---- */
+body{
+background:#FFFFFF;
+}
+
+@font-face { 
+font-family: SoberanaTitular; 
+src: url(../fonts/SoberanaTitularRegular.otf);
+font-weight: normal;
+}
+
+@font-face {
+font-family: SoberanaSans;
+src: url(../fonts/SoberanaSansRegular.otf);
+font-weight: normal;
+}
+
+@font-face {
+font-family: SoberanaSansBold;
+src: url(../fonts/SoberanaSans-Black.otf);
+font-weight: 900;
+}
+
+@font-face {
+font-family: SoberanaSans;
+src: url(../fonts/SoberanaSans-Italic.otf);
+font-style: italic;
+}
+			 
+#wrapper{
+width:990px;
+height:auto;
+margin-left:auto;
+margin-right:auto;
+padding-top:0px;
+padding-bottom:0px;
+}
+#cuerpo{
+width:980px;
+margin-left:auto;
+margin-right:auto;
+background:#FFFFFF;
+padding-top:0px;
+padding-bottom:0px;
+}
+/* ENCABEZADO  ----- */
+#encabezado{
+background:#FFFFFF;
+margin-top: 0px;
+width:980px;
+height:auto;
+}
+#encabezado_menu{
+width:980px;
+height:50px;
+float:left;
+background:#FFFFFF;
+}
+
+#encabezado_roles{
+width:40px;
+float:left;
+overflow: hidden;
+color: #B0B0B0;
+font-size:0.7em;
+height: 50px;
+vertical-align:bottom; 
+font-family:"SoberanaTitular","Times New Roman";
+}
+
+#redes_sociales{
+width:550px;
+float:left;
+overflow: hidden;
+color: #000000;
+font-size:0.7em;
+height: 50px;
+vertical-align:bottom; 
+/*font-family:"SoberanaTitular","Times New Roman";*/
+}
+
+#fecha{
+width:200px;
+float:left;
+text-align:left;
+overflow: hidden; 
+padding-top: 0px;
+}
+
+.fecha{
+width:200px;
+float:left;
+text-align:left;
+overflow: hidden; 
+padding: 0px;
+}
+
+#encabezado_botones_buscar{
+width:160px;
+float:left;
+height: 20px;
+text-align:center;
+vertical-align: bottom;
+text-transform:uppercase;
+}
+
+
+#encabezado_header{
+float:left;
+width:980px;
+height:120px;
+}
+
+
+#encabezado_botones{
+float:left;
+background:#e5e5e5;
+width:980px;
+height:40px;
+background:#FFFFFF url(../imagenes/fondo_menu.png) repeat-y;
+}
+#encabezado_botones_menu{
+float:left;
+width:980px;
+float:left;
+text-transform:uppercase;
+}
+
+#encabezado_botones_buscar .inputbox{
+background-color:#FFFFFF;
+font-family:"SoberanaSans","Times New Roman";
+font-weight:normal; 
+font-size:11px; 
+}
+#ruta{
+float:left;
+text-align:left;
+font-family:"Times New Roman";
+font-size:10px;
+height:25px;
+width:955px;
+margin-top: 10px;
+}
+#photoslider{
+float:left;
+text-align:left;
+font-size:10px;
+height:340px;
+width:980px;
+margin-top:20px;
+margin-bottom:20px;
+}
+/* CONTENIDO  -------- */
+.raya_blanca{
+width:980px;
+height:20px;
+float:left;
+}
+.separador {
+width:980px;
+height:20px;
+float:left;
+background: url('/image/sombra-horizontal.png') no-repeat center;
+}
+.raya_blanca_mini{
+width:980px;
+height:2px;
+float:left;
+background:#FFFFFF;
+}
+#contenido{
+width:980px;
+background:#FFFFFF;
+}
+#panel{
+font-family:"SoberanaSans","Times New Roman"; 
+color: #3a3a3a;
+width:980px;
+float:left;
+/*background:#FFFFFF url(http://servidor.dgest.info/imagenes/raya_larga.gif) repeat-y;*/
+background:#FFFFFF;
+}
+#centro{
+font-size:0.8em;
+background:#FFFFFF; 
+width:700px;
+height:auto;
+float:left;
+}
+.sp{
+width:30px;
+height:auto;
+float:left;
+}
+#derecho{
+line-height:15px;
+background:#FFFFFF;
+width:250px;
+height:auto;
+float:left;
+font-size:12pt;
+}
+
+/* PIE  ------------ */
+#carrouselfooter {
+width:980px;
+font-size:.8em;
+background:#FFFFFF;
+font-family:"SoberanaSans", "Times New Roman";
+color:#606060;
+text-align:center;
+float:left;
+}
+#avisos {
+width:980px;
+font-size:.8em;
+background:#FFFFFF;
+font-family:"SoberanaSans", "Times New Roman";
+color:#606060;
+text-align:center;
+float:left;
+}
+#enlaces{
+float:left;
+border-top:1px solid #999999;
+border-bottom:1px solid #999999;
+background:#dbdbdb;
+height:35px;
+width:980px;
+font-size:11px;
+color: #000000;
+font-family:"Times New Roman";
+}
+#enlaces a{
+text-decoration:none;
+}
+
+#enlaces a:hover {
+color:#444444;
+}
+#enlaces_1{
+float:left;
+padding-top:8px;
+width: 150px;
+text-align:center;
+}
+#enlaces_2{
+float:left;
+width:150px;
+padding-top:10px;
+text-align:center;
+float:left;
+}
+#enlaces_3{
+float:left;
+width: 670px;
+padding-top:5px;
+padding-right: 5px;
+font-size:9px;
+text-align:center;
+}
+#pie {
+width:980px;
+font-size:.8em;
+background:#FFFFFF;
+font-family:"SoberanaSans", "Times New Roman";
+color:#606060;
+text-align:center;
+float:left;
+}
+
+.topFooter {
+    display: block;
+    height: 35px;
+}
+#menuinferior{
+	float:left;
+	width:980px;
+	font-size:.9em;
+	text-align:center;	
+	font-family:"SoberanaSans", "Times New Roman";
+	}
+#menuinferiorcaja{
+	float:left;
+	width:196px;
+	text-align:left;
+	}
+
+#menupie{
+	float:left;
+	width:980px;
+	font-size:.9em;
+	text-align:center;
+	border-bottom:double #dedede;
+	border-top:double #dedede;	
+	font-family:"SoberanaSans", "Times New Roman";
+	}
+#domicilio{
+	float:left;
+	width:980px;
+	font-size:.9em;
+	text-align:center;
+	}
+
+
+#navi {  
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#navi li {
+	float:left;
+	margin:0;
+	padding:0;
+}
+#navi li a {
+ 	margin:0;
+	padding:0;
+	display:block;
+	width:75px;
+	vertical-align:middle;
+	text-decoration:none;
+	text-align:center;
+	font-size:11px;
+}
+#navi li a:hover {
+ 	margin:0;
+	padding:0;
+	color:#444444;
+	font-weight:bold;
+}
+/* IMAGENES  ---------- */
+img{
+border: none;
+}
+a:link, a:visited {
+text-decoration:none;
+font-weight:normal;
+color:#292929;
+}
+a:hover {
+font-weight:normal;
+text-decoration:underline;
+color: #6D6D6D;
+}
+td.contentheading{
+font-weight:normal;
+vertical-align:middle;
+height:30px;
+text-align: left;
+letter-spacing: -0.3px;
+font-size:1.5em;
+font-family:"SoberanaTitular","Times New Roman";
+color:#1B396A;
+}
+table.contentpane{
+margin-top:30px;
+}
+/* ESTILO  ------------ */
+.underline{
+text-decoration:underline;
+}
+.search input{
+margin-top:5px;
+width:100px;
+padding-left:20px;
+font-size:8px;
+background:#FFFFFF;
+font-family:"Times New Roman";
+background:#FFFFCC;
+}
+/* TABLA DE CATEGORIAS --------- */
+.sectiontableheader{
+font-weight:normal;
+vertical-align:middle;
+height:30px;
+text-align: left;
+letter-spacing: -0.3px;
+font-size:1.5em;
+font-family:"SoberanaTitular","Times New Roman";
+color:#1B396A;
+}
+.sectiontableentry1{
+line-height:15px;
+padding:0pt 10px;
+font-size:12px;
+background:none;
+color:#333333;
+}
+.sectiontableentry2{
+background:#d1e4c8;
+line-height:15px;
+font-size:12px;
+padding:0pt 10px;
+color:#333333;
+}
+.inputbox{
+margin-top:5px;
+padding-left:5px;
+font-size:10px;
+font-family: "Times New Roman";
+background: #FFFFFF;
+}
+/* ------- component -------- */
+.componentheading{
+font-weight:normal;
+vertical-align:middle;
+height:30px;
+text-align: left;
+letter-spacing: -0.3px;
+font-size:1.5em;
+font-family:"SoberanaTitular","Times New Roman";
+color:#1B396A;
+}
+#componentheading{
+font-weight:normal;
+vertical-align:middle;
+height:30px;
+text-align: left;
+letter-spacing: -0.3px
+font-size:1.5em;
+font-family:"SoberanaTitular","Times New Roman";
+color:#1B396A;
+}
+.buttonheading{
+vertical-align:middle;
+font-size:11px;
+height:30px;
+width: 30px;
+}
+.contentpaneopen{
+font-size:13px;
+}
+/* ------- tip de editar -------*/
+.tool-tip {
+font-family:"Times New Roman";
+background:#ffc;
+border: 2px solid #D4D5AA;
+font-size:10px;
+padding: 5px;
+max-width:200px;
+color: #666666;
+}
+.tool-title {
+color: #000000;
+}
+
+/* ------ SEARCH ----*/
+.searchintro {
+background:#f2f2f2;
+width: 710px;
+}
+fieldset{
+margin-top:10px;
+width:690px;
+padding:5px;
+border:1px solid #d1d1d1;
+overflow:hidden;
+}
+/* ---- diseno -------------*/
+.borde_punteado {
+    border-bottom: 1px dotted rgb(170, 170, 170);
+    padding-bottom: 5px;
+}
+.box1 {
+    border-bottom: 1px dotted rgb(170, 170, 170);
+    padding-bottom: 5px;
+}
+.inbox1 {
+    border-bottom: 1px dotted rgb(170, 170, 170);
+    padding-bottom: 5px;
+}
+
+.small {
+font-size:12px;
+font-family:"Times New Roman";
+color: #3a3a3a;
+}
+
+.stitular {
+font-size:13px;
+font-family:"SoberanaTitular","Times New Roman";
+color:#1B396A;
+} 
+
+.sregular {
+font-size:12px;
+font-family:"SoberanaSans","Times New Roman";
+color: #3a3a3a;
+}
+
+
+.smalln {
+font-size:10px;
+font-family:"Times New Roman";
+color: #000000;
+}
+
+
+.roles_titulo {
+font-size:18px;
+color: #118843;
+font-family:"SoberanaTitular","Times New Roman";
+}
+
+.roles_texto {
+font-size:13px;
+font-family:"SoberanaSans","Times New Roman";
+color: #3a3a3a;
+}
+
+.roles_texto a{
+color: #3a3a3a;
+font-size:13px;
+font-family:"SoberanaSans","Times New Roman";
+}
+
+.roles_texto a:hover {
+color: #118843;
+font-size:13px;
+font-family:"SoberanaSans","Times New Roman";
+}
+
+
+.noticias_titulo {
+color: #000000;
+font-size:10px;
+}
+ 
+
+ 
+td.createdate{
+font-size:9px;
+font-family:"Times New Roman";
+color: #333366;
+}
+.spmenu{
+width:150px;
+height:10px;
+}
+
+
+
+h1{
+line-height:30px;
+vertical-align:middle;
+background:#118843;
+font-size:15px;
+font-weight:normal;
+height:30px;
+color:#FFFFFF;
+text-align:center;
+letter-spacing: -0.3px
+}
+h2{
+font-size:16px;
+font-family:"SoberanaTitular","Times New Roman";
+color:#1B396A;
+}
+h3{
+font-size:1.1em;
+font-family:"SoberanaTitular","Times New Roman";
+color: #118843;
+}
+h4{
+line-height:20px;
+font-family: "Times New Roman"; 
+font-size: 16px; 
+color: #993333;
+}
+.h5{
+font-size:11px;
+color: #385395;
+}
+h6{ 
+font-size:12px;
+color:red;
+text-decoration:blink;
+}
+
+
+/* -----COMPONENT USER ----------*/
+.button {
+margin-top:5px;
+padding-left:5px;
+font-size:10px;
+height: 24px;
+color: #000000;
+font-family:"Times New Roman";
+background:#f2a440;
+}
+/* ----- RELACIONADO ----------*/
+
+.relateditems li{
+ margin-right:200px;
+}
+/* ----- EFEMERIDES ------------*/
+.mod_events_latest_table{
+ font-family:"Times New Roman";
+font-size:10px;
+height:40px;
+line-height:15px;
+}
+.mod_events_latest_rsslink{
+font-size:10px;
+text-align:center;
+width: 450px;
+height: 20px;
+margin-top: 2px;
+padding-top:4px;
+background:#6075aa;
+}
+
+/* ----- blog ----------*/
+td.article_column
+{
+	padding-right: 4px;
+}
+td.column_separator
+{
+	padding-left: 5px;
+	padding-right: 0px;
+	border-left: 1px solid #bcac6c;
+}
+/*---CONTENEDOR-----*/
+table.container_head {
+height:30px;
+width:645px;
+/*background-image:url(http://servidor.dgest.info/imagenes/sidebar_center.jpg);*/
+}
+
+.container_head_text {
+height:23px;
+padding:7px 0 0 0;
+font-family:"Times New Roman";
+color:#FFFFFF;
+text-align:center;
+font-size:13px;
+font-weight:bold;
+}
+
+table.container_content {
+width:645px;
+padding:5px;
+border-width: 1px 1px 1px 1px;
+border-spacing: 0px;
+border-style: none solid solid solid;
+border-color: #FF7E06;
+}
+
+.container_r2{
+border-width: 1px 1px 1px 1px;
+border-spacing: 0px;
+border-style: none solid solid solid;
+border-color: #FF7E06;
+background:#f5f5f5;
+}
+
+
+/*-- leer mas --*/
+a.readon { 
+    background: url("../imagenes/sprites.png") no-repeat;
+    color: #ffffff; display: block; font: 11px/29px serif; 
+    height: 35px; text-align: center; text-transform: uppercase; 
+    width: 118px;
+    background-position: -413px -61px;
+    margin-top: 0px;
+    margin-left: 15px; 
+    
+    text-decoration: none;
+}
+a.readon:hover { background-position: 0 -321px;}
+
+
+#cboxTitle, #cboxCurrent { display:none !important; }
+
+
+a.video-thumb {
+    display: block;
+    background-image: url("../imagenes/sprites.png");
+    background-position: -321px -188px;
+    background-repeat: no-repeat;
+}
+
+.home-post .no-thumb, .home-post .thumb {
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+    display: block;
+    height: 160px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 250px;
+}
+
+
+.home-post .video-thumb {
+    height: 160px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 250px;
+}
+
+.video-thumb::after {
+    background-image: url("../imagenes/sprites.png");
+    background-position: -321px -188px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 97px;
+    left: 50%;
+    margin: -48px 0 0 -48px;
+    opacity: 0.6;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 97px;
+}
+
+#subenlaces ul li a{
+    color: white;
+}
+
+#subenlaces ul li a:hover{
+    color: black;
+}
+
+#subenlaces ul li ul li a{
+    color: black;
+}

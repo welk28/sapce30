@@ -1,0 +1,14 @@
+
+primero determinar el ultimo numero de folio:
+select * from horario where periodo='2020-1' order by folio;
+
+---------------------------------------------------------
+para actualizar folios:
+en caso de ser periodo normal (no verano) 
+1. en la linea 14 actualizar periodo a folear
+2. en la linea 25 colocar el ultimo numero de folio del año
+   de ser el inicio de año, configurar a cero(0).
+
+
+
+http://localhost/califica/actualizafolio.php
