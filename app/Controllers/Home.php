@@ -20,11 +20,11 @@ class Home extends BaseController
     }
     public function auth(){
         $rol=$this->request->getPost('rol');
-		$rfcp=$this->request->getPost('rfcp');
+		$idoc=$this->request->getPost('rfcp');
 		$contra=$this->request->getPost('contra');
 		print_r($_POST);
 
-        $datos = $this->db->query("SELECT p.rfcp, pe.nomdoc, p.idr, r.tipo, pe.passdoc FROM rol r,permisos p, personal pe WHERE r.idr=p.idr and p.rfcp=pe.rfcp AND p.status=1 AND p.idr=$rol and pe.passdoc=sha1('$contra') AND p.rfcp='$rfcp'");
+        $datos = $this->db->query("SELECT p.idoc, pe.nomdoc, p.idr, r.tipo, pe.passdoc FROM rol r,permisos p, docente pe WHERE r.idr=p.idr and p.idoc=pe.idoc AND p.status=1 AND p.idr=$rol and pe.passdoc=sha1('$contra') AND p.idoc='$idoc'");
 
 		$nr = $datos->getRow();
 		
@@ -37,9 +37,9 @@ class Home extends BaseController
 
 			//ver si aparece
 			echo"existen registros <br>";	
-			echo $nr->rfcp." ".$nr->nomdoc." ".$nr->idr." ".$nr->tipo." ".$per->periodo." ".$per->descper;
+			echo $nr->idoc." ".$nr->nomdoc." ".$nr->idr." ".$nr->tipo." ".$per->periodo." ".$per->descper;
 			$data  = [
-				'rfcp' => $nr->rfcp, 
+				'idoc' => $nr->idoc, 
 				'nombre' => $nr->nomdoc,
 				'guyu' => TRUE,
 				'idr'=> $nr->idr,

@@ -42,6 +42,9 @@ $routes->add('/logout', 'Home::logout');
 $routes->add('/allstud', 'Alumno::todos');
 $routes->add('/incourse', 'Alumno::inscritos');
 
+//horarios
+$routes->add('/horarios', 'Horario::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
