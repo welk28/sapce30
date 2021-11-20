@@ -41,6 +41,10 @@ $routes->add('/logout', 'Home::logout');
 //alumnos
 $routes->add('/allstud', 'Alumno::todos');
 $routes->add('/incourse', 'Alumno::inscritos');
+$routes->get('/horario/(:any)', 'Alumno::horarioalumno/$1');
+
+$routes->add('/candidate', 'Alumno::aspirantes');
+$routes->add('/newcandidate', 'Alumno::altaspirante');
 
 //horarios
 $routes->add('/horarios', 'Horario::index');

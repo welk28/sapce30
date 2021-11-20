@@ -71,7 +71,9 @@
                                             <td><?= $al->idcar ?></td>
                                             <td align="center">
                                                 <div class="btn-group ">
-                                                    <a href="" class="btn btn-sm btn-info"><i class="far fa-clock"></i></a>
+                                                    
+                              <a href="<?php echo base_url(); ?>/horario/<?= $al->matricula ?>" class="btn btn-success btn-xs" title="Ver los datos generales del usuario"><i class="far fa-clock"></i></a>
+
                                                     <a href="" class="btn btn-sm btn-primary"><span class="far fa-id-card"></span></a>
                                                     <a href="" class="btn btn btn-sm btn-success"><span class="fas fa-th-list"></span></a>
                                                 

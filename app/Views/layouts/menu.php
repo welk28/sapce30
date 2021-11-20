@@ -43,12 +43,7 @@
                   <p>Historia</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Aspirante</p>
-                </a>
-              </li>
+              
             </ul>
           </li>
           <!-- TODO: Crear paginas de materias -->
@@ -93,13 +88,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+              <a href="<?php echo base_url('/newcandidate')?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nuevo</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+              <a href="<?php echo base_url('/candidate')?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Listado</p>
                 </a>

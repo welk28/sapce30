@@ -189,7 +189,7 @@
 									<td>$h->idg</a></td>
 									<td><a href='bajamah.php?idh=$h->idh' target='_self' title='Borrar este horario'> $h->idh / $h->idmat</td>
 									<td align='center'>$h->sem</td>
-									<td>$h->nommat <br> ** <a href='modomat.php?idh=$h->idh&cupo=$h->cupo&idcar=$c->idcar&idoc=$h->idoc&nomdoc=$h->nomdoc&idmat=$h->idmat&nommat=$h->nommat&idg=$h->idg' tarjet='_self' title='Modificar a docente/materia'>$h->nomdoc</a></td>
+									<td>$h->nommat <br> **    <a href='modomat.php?idh=$h->idh&cupo=$h->cupo&idcar=$c->idcar&idoc=$h->idoc&nomdoc=$h->nomdoc&idmat=$h->idmat&nommat=$h->nommat&idg=$h->idg' tarjet='_self' title='Modificar a docente/materia'>$h->nomdoc</a></td>
 									<td align='center'>";
 									$lunes="select * from imparte as i, reloj as r, aula as a where a.ida=i.ida and r.idr=i.idr and i.idh='$h->idh' and i.idia='1';";
 									$lu=mysql_query($lunes,$conexion);
