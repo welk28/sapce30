@@ -2,39 +2,39 @@
 
 namespace App\Controllers;
 
-class Alumno extends BaseController
+class Docente extends BaseController
 {
 	public function index()
 	{
-	}
-	public function todos()
-	{
-		if (!session('guyu')) {return redirect()->to(base_url('/'));} //sesión inexistente retorna a baseurl
+    if (!session('guyu')) {return redirect()->to(base_url('/'));} //sesión inexistente retorna a baseurl
 
-		$consulta = $this->db->query("select * from alumnos order by matricula desc");
+		$consulta = $this->db->query("select * from docente order by nomdoc");
 
-		$alumnos = $consulta->getResult();
+		$docentes = $consulta->getResult();
 		$data = [
 			'uri' => current_url(true),
-			'alumnos' => $alumnos
+			'docentes' => $docentes
 		];
-		return view('admin/alumno/historialumno', $data);
+		return view('admin/docente/docentes', $data);
 	}
-	public function inscritos()
+	
+	public function Horadocente($idoc= NULL)
 	{
-		if (!session('guyu')) {
-			return redirect()->to(base_url('/'));
-		} //sesión inexistente retorna a baseurl
+		if (!session('guyu')) {			return redirect()->to(base_url('/'));		} //sesión inexistente retorna a baseurl
 
 		$periodo = session('periodo');
-		$consulta = $this->db->query("select distinct a.matricula, a.app, a.apm, a.nom, a.status, a.fecnac, a.sexo, a.idcar  from alumnos as a, horario as h, cursa as c where h.idh=c.idh and a.matricula=c.matricula and h.periodo='$periodo' order by a.idcar, a.status");
+		$consulta = $this->db->query("select * from docente where idoc='$idoc'");
 
-		$alumnos = $consulta->getResult();
+		$docente = $consulta->getRow();
+
+    $conmat= $this->db->query("select h.idoc, h.idh, h.idmat, m.nommat, m.credit from horario as h, materias as m where h.idmat=m.idmat and h.idoc='$idoc' and h.periodo='$periodo'");
+    $materias=$conmat->getResult();
 		$data = [
 			'uri' => current_url(true),
-			'alumnos' => $alumnos
+			'doc' => $docente,
+			'materias' => $materias,
 		];
-		return view('admin/alumno/inscritos', $data);
+		return view('admin/docente/horadocente', $data);
 	}
 	public function aspirantes()
 	{

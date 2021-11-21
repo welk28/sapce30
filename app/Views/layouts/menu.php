@@ -46,6 +46,27 @@
               
             </ul>
           </li>
+          <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p> Docentes <i class="right fas fa-angle-left"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url('/docentes')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lista</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url('/allstud')?>" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Materias</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
           <!-- TODO: Crear paginas de materias -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -59,23 +80,19 @@
               <li class="nav-item">
                 <a href="pages/tables/simple.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
+                  <p>Lista</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/data.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
+                  <p>Agregados a Materia</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
-                </a>
-              </li>
+              
             </ul>
           </li>
+
           
           <!-- TODO: Crear paginas de aspirantes -->
           <li class="nav-item has-treeview">
@@ -189,7 +206,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
+              <p>Carreras</p>
             </a>
           </li>
           

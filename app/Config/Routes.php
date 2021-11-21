@@ -49,6 +49,12 @@ $routes->add('/newcandidate', 'Alumno::altaspirante');
 //horarios
 $routes->add('/horarios', 'Horario::index');
 
+//docentes
+$routes->add('/docentes', 'Docente::index');
+$routes->get('/docentes/(:any)', 'Docente::horadocente/$1');
+$routes->add('/imparte', 'Docente::materiasDocente');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

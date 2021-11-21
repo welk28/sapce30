@@ -6,7 +6,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-5">
-        <h1 class="m-0 text-dark">Horario Alumno</h1>
+        <h1 class="m-0 text-dark">Horario Docente</h1>
       </div><!-- /.col -->
       <div class="col-sm-1">
         <button type="button" class="btn btn-primary btn-print btn-sm ">
@@ -32,29 +32,7 @@
         <div class="card card-success">
 
           <div class="card-body">
-            <div class="row">
-              <div class="col-sm-12 mb-3">
-                <div class="table-responsive-sm">
-                  <table class="table table-sm table-borderless">
-                    <thead>
-                      <tr>
-                        <td rowspan="3" align="center"> <img src="<?= base_url('/') . "/public/img/SGC.jpg"; ?>" alt="" width="80px"> </td>
-                        <td rowspan="2" align="left"><strong>Formato de carga académica.</strong></td>
-                        <td>Código: Num. De control del estudiante</td>
-                      </tr>
-                      <tr>
-                        <td>Revisión: O</td>
-                      </tr>
-                      <tr>
-                        <td align="left"><strong>Referencia a la Norma ISO 9001-2015: 8.2.1, 8.2.2, 8.2.3, 8.2.4, 8.5.2</strong></td>
-                        <td>P&aacute;gina 1 de 1 </td>
-                      </tr>
-                    </thead>
-
-                  </table>
-                </div>
-              </div>
-            </div>
+           
             <div class="row">
               <div class="col-sm-12 table-responsive">
                 <table class="table table-sm table-borderless">
@@ -97,37 +75,12 @@
                     </tr>
 
                     <tr>
-                      <td width="24%">NUMERO DE CONTROL:</td>
-                      <td width="31%"><u><?= $matricula ?></u></td>
-                      <td></td>
-                      <td></td>
+                      <td width="24%">Docente:</td>
+                      <td width="31%"><u><?= $doc->nomdoc ?></u></td>
+                      <td>Periodo:</td>
+                      <td><u> <?= session('descper') ?> </u></td>
                     </tr>
-                    <tr>
-                      <td>ESTUDIANTE:</td>
-                      <td><u><?= $al->app . " " . $al->apm . " " . $al->nom ?></u></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>SEMESTRE:</td>
-                      <td><u><?= $al->status ?></u></td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td>CARRERA:</td>
-                      <td><u><?= $al->descar ?></u></td>
-                      <td>CRÉDITOS:</td>
-                      <td ><u >
-                          <p id="ccred" ></p>
-                        </u></td>
-                    </tr>
-                    <tr>
-                      <td>PLAN:</td>
-                      <td><u><?= $al->idcar ?></u></td>
-                      <td>Especialidad: </td>
-                      <td> </td>
-                    </tr>
+                    
                   </thead>
 
                 </table>
@@ -146,17 +99,18 @@
                     <table class="table table-sm table-bordered table-striped text-sm">
                       <thead>
                         <tr>
-                          <th>Materia</th>
-                          <th>CLAVE</th>
-                          <th>GPO</th>
-                          <th>OPORT</th>
-                          <th>CR</th>
-                          <th>LUNES</th>
-                          <th>MARTES</th>
-                          <th>MIERCOLES</th>
-                          <th>JUEVES</th>
-                          <th>VIERNES</th>
-                          <th>x</th>
+                          <th >CLAVE</th>
+                          <th >Materia</th>
+                          <th >GRUPO</th>
+                          <th >NA</th>
+                          <th ">CR</th>
+                          <th >LUNES</th>
+                          <th >MARTES</th>
+                          <th >MIERCOLES</th>
+                          <th >JUEVES</th>
+                          <th >VIERNES</th>
+                          <th >Calif</th>
+                          <th >Lista</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -167,20 +121,22 @@
                         <?php foreach ($materias as $m) : ?>
                           <?php
 
-                          $grupoc = $db->query("select g.idg, h.idh, h.idmat from hgrupo as g, horario as h,  encarre as e where e.idg=g.idg and g.idh=h.idh and h.idh='$m->idh' and e.idcar='$al->idcar';");
-                          $gpo = $grupoc->getRow();
+                          $grupoc = $db->query("select * from hgrupo where idh='$m->idh';");
+                          $gpo = $grupoc->getResult();
                           ?>
                           <tr>
-                            <td> <?= $m->nommat . "<br>" . $m->nomdoc; ?>
-                              <?php
-                              if ($m->opor == 3)
-                                $sopor++;
-                              ?>
-                            </td>
-                            <td> <?= $m->idmat ?> </td>
-                            <td><?= $gpo->idg ?></td>
-                            <td><?= $m->descopor ?></td>
-                            <td><?= $m->credit ?> <?php $totcre += $m->credit; ?> </td>
+                            <td> <?= $m->idh . "/" . $m->idmat; ?></td>
+                            <td> <?= $m->nommat ?> </td>
+                            <td>
+                              
+                              <?php foreach ($gpo as $g) : ?>
+                                <?= $g->idg."<br>"; ?>
+                                <?php endforeach;?>
+                                
+                              </td>
+                              
+                              <td></td>
+                              <td> <?= $m->credit ?> </td>
                             <td>
                               <?php
                               $dialunes = $db->query("select * from imparte as i, reloj as r, aula as a where a.ida=i.ida and r.idr=i.idr and i.idh='$m->idh' and i.idia='1';");
@@ -237,22 +193,23 @@
                               }
                               ?>
                             </td>
+                            <td><a href="" class="btn btn-sm btn-primary"><span class="far fa-id-card"></span></a></td>
+                          <td><a href="" class="btn btn btn-sm btn-success"><span class="fas fa-th-list"></span></a></td>
                           </tr>
                         <?php endforeach; ?>
                         <tr>
-                          <td></td>
-                          <td></td>
-                          <td align='right'>Total de créditos</td>
-                          <td></td>
-                          <td>
-                            <p id="totalc"><?= $totcre ?></p>
-                          </td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
+                        <th >CLAVE</th>
+                          <th >Materia</th>
+                          <th >GRUPO</th>
+                          <th >NA</th>
+                          <th ">CR</th>
+                          <th >LUNES</th>
+                          <th >MARTES</th>
+                          <th >MIERCOLES</th>
+                          <th >JUEVES</th>
+                          <th >VIERNES</th>
+                          <th >Calif</th>
+                          <th >Lista</th>
                         </tr>
                       </tbody>
                     </table>
